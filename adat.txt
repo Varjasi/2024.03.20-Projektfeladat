@@ -1,4 +1,4 @@
-1 Budapest M2 T2 4
+1 Budapest M2 T2 0
 1 Budapest M4 T3 9
 1 Kecskemét M3 T1 7
 1 Pécs M1 T3 6

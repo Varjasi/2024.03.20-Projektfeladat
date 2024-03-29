@@ -4,10 +4,11 @@ cégadatok = []
 tranzakciók = []
 darabszám = []
 
+
 with open('adat.txt', 'r', encoding='utf-8') as file:
     for sor in file:
        adatok = sor.strip().split(' ')
-       adat = {'tranzakció:': adatok[0], 'város': adatok[1], 'munkatárs:': adatok[2], 'termékód:': adatok[3], 'darabszám:': adatok[4]}
+       adat = {'tranzakció:': adatok[0], 'város': adatok[1], 'munkatárs:': adatok[2], 'termékód:': adatok[3], 'darabszám:': int(adatok[4])}
        cégadatok.append(adat)
        tranzakciók.append(int(adatok[0]))
        darabszám.append(int(adatok[4]))
@@ -38,7 +39,13 @@ darabok()
 sorszám = int(input("Add meg a nap sorszámát"))
 
 while sorszám != '':
+    if sorszám > 1 and sorszám < 28:
+        print(cégadatok[sorszám])
+    else:
+        print("Hibás adatbevitel! Próbáld meg újra")
+    if cégadatok[sorszám] ['darabszám:'] <= 0:
+        print("A megadott napon nem volt forgalma a cégnek")
+    sorszám = int(input("Add meg a nap sorszámát"))
     
-
     
 
