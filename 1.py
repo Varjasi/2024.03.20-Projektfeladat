@@ -35,17 +35,24 @@ def darabok():
 darabok()
 
 # 4. feladat
-
+'''
 sorszám = int(input("Add meg a nap sorszámát"))
 
-while sorszám != '':
-    if sorszám > 1 and sorszám < 28:
+while sorszám != 0:
+    if sorszám >= 1 and sorszám <= 28:
         print(cégadatok[sorszám])
     else:
         print("Hibás adatbevitel! Próbáld meg újra")
     if cégadatok[sorszám] ['darabszám:'] <= 0:
         print("A megadott napon nem volt forgalma a cégnek")
     sorszám = int(input("Add meg a nap sorszámát"))
-    
-    
+''' 
+# 5. feladat
+legtöbb = cégadatok[0] ['darabszám:']
 
+for m in cégadatok['darabszám:']:
+    print("5. feladat")
+    if m > legtöbb:
+        legtöbb = m
+
+print(f'A legnagyobb bevételt az {legtöbb} kódu munkatárs generálta')
